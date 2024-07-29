@@ -2,48 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Beautiful Website</title>
+    <title>Git Cheat Sheet</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-
-        p {
-            color: #666;
-            line-height: 1.5;
+        pre {
+            white-space: pre-wrap;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Beautiful Website</h1>
-        <input type="file" id="file-input" accept=".md">
-        <div id="markdown-content"></div>
+    <h1>Git Cheat Sheet</h1>
+    <div id="markdownContent">
+        Loading Git Cheat Sheet...
     </div>
 
-    <!-- 引入marked.js库 -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        document.getElementById('file-input').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const text = e.target.result;
-                    document.getElementById('markdown-content').innerHTML = marked(text);
-                };
-                reader.readAsText(file);
-            }
-        });
+        // Function to load Markdown content from file
+        function loadMarkdown() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var converter = new showdown.Converter(); // Assuming showdown.js is included
+                        var markdownContent = xhr.responseText;
+                        var htmlContent = converter.makeHtml(markdownContent);
+                        document.getElementById('markdownContent').innerHTML = htmlContent;
+                    } else {
+                        document.getElementById('markdownContent').innerHTML = 'Failed to load Git Cheat Sheet content.';
+                    }
+                }
+            };
+            xhr.open('GET', '1.md', true); // Replace 'Git Cheat Sheet.md' with your Markdown file name
+            xhr.send();
+        }
+
+        // Call the function when the page loads
+        window.onload = function() {
+            loadMarkdown();
+        };
     </script>
+
+    <!-- Include Showdown.js library for Markdown to HTML conversion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
 </body>
 </html>
