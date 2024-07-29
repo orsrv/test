@@ -1,31 +1,19 @@
 # My Git Project
 
 ## Description
-我们都有一个家，名字叫中国，
-这是一个美丽而多彩的国家，
-拥有悠久的历史和文化，
-以及众多的自然风光和名胜古迹。
-中国是世界上人口最多的国家之一，
-也是世界第二大经济体。
-我们为自己是中国人而自豪！
-
-## Installation
-China is also known for its delicious cuisine, with a wide variety of regional dishes that will tantalize your taste buds. From spicy Sichuan cuisine to delicate Cantonese dim sum, there is something for everyone to enjoy. Additionally, China is home to the Great Wall, a magnificent architectural wonder that stretches over thousands of kilometers. Exploring the vibrant markets and bustling cities, such as Beijing and Shanghai, is a must for any visitor. Whether you're interested in history, culture, or simply experiencing the vibrant energy of this incredible country, China has it all.
-
-## My Git Project
 Welcome to my Git project! In this project, I will be showcasing my coding skills and collaborating with other developers. I will be using Git, a distributed version control system, to manage and track changes to my codebase.
 
-### Features
+## Features
 - Version control: Git allows me to keep track of all the changes I make to my code. I can easily revert back to previous versions if needed.
 - Branching: With Git, I can create multiple branches to work on different features or bug fixes simultaneously. This helps me keep my codebase organized and allows for easy collaboration with other developers.
 - Collaboration: Git enables me to collaborate with other developers by easily merging their changes into my codebase. I can also review their code and provide feedback using pull requests.
 
-### Getting Started
+## Getting Started
 To get started with my Git project, follow these steps:
 
 1. Clone the repository: Run the following command in your terminal:
     ```
-    git clone https://github.com/your-username/my-git-project.git
+    git clone https://github.com/orsrv/my-git-project.git
     ```
 
 2. Navigate to the project directory:
@@ -40,14 +28,14 @@ To get started with my Git project, follow these steps:
 
 4. Start the project: Depending on the project, you may need to run a specific command to start it. Refer to the project's documentation for instructions.
 
-### Contributing
+## Contributing
 If you're interested in contributing to my Git project, follow these guidelines:
 
 1. Fork the repository: Click on the "Fork" button on the GitHub repository page.
 
 2. Clone your forked repository: Run the following command in your terminal:
     ```
-    git clone https://github.com/your-username/my-git-project.git
+    git clone https://github.com/orsrv/my-git-project.git
     ```
 
 3. Create a new branch: Run the following command to create a new branch for your changes:
@@ -69,6 +57,6 @@ If you're interested in contributing to my Git project, follow these guidelines:
 
 7. Create a pull request: Go to the GitHub repository page and click on the "New pull request" button. Fill in the necessary details and submit your pull request.
 
-### Conclusion
+## Conclusion
 Thank you for checking out my Git project! I hope you find it interesting and useful. Feel free to explore the codebase, contribute, or provide feedback. Happy coding!
 
